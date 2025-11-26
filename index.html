@@ -1,40 +1,46 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>박 찬 희 — 포트폴리오 (v20A)</title>
-<style>
-  /* 기본 리셋 */
-  :root {
-    --bg:#0a0a0a;
-    --muted:#dcd6c8;
-    --gold: rgba(255, 215, 100, 1);
-    --gold-weak: rgba(255,200,60,0.18);
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--muted);
-    font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.6;
-  }
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>박 찬 희 — 국악 타악 연주자</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <img src="assets/logo.svg" class="logo" alt="PCH logo"/>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
 <section class="hero">
   <div class="container hero-inner">
+
+    <!-- 왼쪽 프로필 영역 -->
     <div class="hero-left">
-      <div class="hero-profile-wrap"><img src="assets/profile.jpg" alt="프로필" class="hero-profile"/></div>
+
+      <!-- 🔥 새로 적용된 프로필 + 배경 효과 세트 -->
+      <div class="profile-wrapper">
+        <div class="gold-dust"></div>
+        <div class="profile-ring"></div>
+        <img src="assets/profile.jpg" alt="프로필 사진" class="profile"/>
+      </div>
+
     </div>
+
+    <!-- 오른쪽 텍스트 영역 -->
     <div class="hero-right">
       <h1 class="hero-title">박 찬 희</h1>
       <p class="role">프리랜서 / 국악 타악 연주자</p>
       <p class="desc">창극, 관현악, 전통음악 등 타악연주자로 활동하고 있는 박찬희입니다.</p>
       <a class="btn" href="#projects">프로젝트 보기</a>
     </div>
+
   </div>
 </section>
 
