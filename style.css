@@ -261,4 +261,80 @@ body{
 .hero-inner {
   background: none !important;
   backdrop-filter: none !important;
+  /* ======================================
+   PRINT STYLES — 인쇄용 스타일
+   ====================================== */
+@media print {
+
+  /* ---------------------------
+     기본 페이지 여백 제거
+  ---------------------------- */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ---------------------------
+     전 페이지 요소 잘림 방지
+  ---------------------------- */
+  * {
+    box-sizing: border-box !important;
+    page-break-inside: avoid !important;
+  }
+
+  img, video, canvas {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* ---------------------------
+     화면용 UI 숨기기
+  ---------------------------- */
+  nav, .navbar, .menu, .footer, .button-area {
+    display: none !important;
+  }
+
+  /* ---------------------------
+     전체 레이아웃 넓이 고정
+  ---------------------------- */
+  main, .container, .wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+  }
+
+  /* ---------------------------
+     섹션이 페이지 중간에서 
+     뜯어지지 않도록 고정
+  ---------------------------- */
+  section, .section, .block {
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* ---------------------------
+     글자 색상 강제 유지
+  ---------------------------- */
+  *, h1, h2, h3, h4, p, span {
+    color: inherit !important;
+  }
+
+  /* ---------------------------
+     배경색/배경이미지 유지
+  ---------------------------- */
+  .section, body, html, div {
+    background: inherit !important;
+    background-color: inherit !important;
+  }
+
 }
